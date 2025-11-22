@@ -19,14 +19,18 @@ body {
 .app-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 16px;
 }
 
 .page-title {
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: 600;
-  color: #111827;
+  color: #0f172a;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
   margin: 0 0 2rem 0;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .dashboard-row {
@@ -64,6 +68,17 @@ body {
   margin: 0;
 }
 
+
+/* Section containers for consistent width */
+.filters-section,
+.summary-section,
+.table-section,
+.chart-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* Responsive breakpoints */
 
 /* Tablet and below (< 1024px) */
@@ -90,8 +105,9 @@ body {
   }
 
   .page-title {
-    font-size: 1.25rem;
-    margin: 0 0 1.5rem 0;
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+    padding-bottom: 1.25rem;
   }
 
   .chart-container {
@@ -118,8 +134,10 @@ body {
   }
 
   .page-title {
-    font-size: 1.125rem;
-    margin: 0 0 1rem 0;
+    font-size: 1.375rem;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 1rem;
+    letter-spacing: -0.02em;
   }
 
   .dashboard-row {

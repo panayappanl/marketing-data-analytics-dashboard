@@ -21,35 +21,43 @@
   color: #374151;
 }
 
+/* Base styling for ALL filter controls */
 .filter-group select,
-.filter-group input {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.875rem;
+.filter-group input[type="text"] {
+  height: 38px;
+  padding: 0 12px;
+  font-size: 14px;
   border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
-  background: #fff;
+  border-radius: 6px;
+  outline: none;
+  background-color: #fff;
+  box-sizing: border-box;
+  appearance: none;
+  transition: border-color 0.2s ease;
   color: #111827;
   min-width: 150px;
-  transition: border-color 0.15s ease;
-}
-
-.filter-group select:hover,
-.filter-group input:hover {
-  border-color: #9ca3af;
+  width: 100%;
+  max-width: 100%;
 }
 
 .filter-group select:focus,
-.filter-group input:focus {
-  outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+.filter-group input[type="text"]:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
 }
 
-.filter-group input[type="text"] {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  min-width: 200px;
+.filter-group select:hover,
+.filter-group input[type="text"]:hover {
+  border-color: #9ca3af;
+}
+
+/* Custom dropdown indicator for select */
+.filter-group select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='none' stroke='%236b7280' stroke-width='2' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M6 9l6 6 6-6'/></svg>");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  padding-right: 32px;
 }
 
 .filter-group input::placeholder {
@@ -58,13 +66,38 @@
 
 /* Responsive breakpoints */
 
+/* Desktop and large screens (>= 1024px) */
+@media (min-width: 1024px) {
+  .filter-group select,
+  .filter-group input[type="text"] {
+    height: 42px;
+    padding: 0 14px;
+    font-size: 15px;
+    border-radius: 8px;
+  }
+
+  /* Make search input slightly wider */
+  .filter-group input[type="text"] {
+    width: 300px;
+    max-width: 300px;
+  }
+
+  /* Desktop width for dropdowns */
+  .filter-group select {
+    width: 200px;
+    max-width: 200px;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+}
+
 /* Small screens (< 600px) */
 @media (max-width: 600px) {
   .filters {
     flex-direction: column;
   }
 
-  .filters .filter-group input,
+  .filters .filter-group input[type="text"],
   .filters .filter-group select {
     width: 100%;
     max-width: 100%;
@@ -85,8 +118,9 @@
   }
 
   .filter-group select,
-  .filter-group input {
+  .filter-group input[type="text"] {
     width: 100%;
+    max-width: 100%;
     min-width: 100%;
   }
 }
@@ -107,9 +141,11 @@
   }
 
   .filter-group select,
-  .filter-group input {
+  .filter-group input[type="text"] {
     padding: 0.4rem 0.6rem;
     font-size: 0.8125rem;
+    width: 100%;
+    max-width: 100%;
   }
 }
 

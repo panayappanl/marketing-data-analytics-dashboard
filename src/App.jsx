@@ -11,17 +11,21 @@ function App() {
   return (
     <div className="app-container">
       <div className="app-content">
-        <h1 className="page-title">Contribution / Marketing Dashboard</h1>
+        <h1 className="page-title">Marketing Performance Dashboard</h1>
         
-        <Filters />
+        <div className="filters-section">
+          <Filters />
+        </div>
         
-        <SummaryCards />
+        <div className="summary-section">
+          <SummaryCards />
+        </div>
         
         <div className="dashboard-row">
-          <div className="dashboard-left">
+          <div className="dashboard-left table-section">
             <DataTable />
           </div>
-          <div className="dashboard-right">
+          <div className="dashboard-right chart-section">
             <PerformanceChart />
           </div>
         </div>
