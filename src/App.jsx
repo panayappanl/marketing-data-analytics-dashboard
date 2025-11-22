@@ -1,3 +1,8 @@
+/**
+  * Live Demo: https://marketing-data-analytics-dashboard.vercel.app/
+ * GitHub Repo: https://github.com/panayappanl/marketing-data-analytics-dashboard
+ */
+
 import Filters from './components/Filters/Filters.jsx'
 import SummaryCards from './components/Summary/SummaryCards.jsx'
 import DataTable from './components/Table/DataTable.jsx'
